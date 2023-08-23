@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!isset ($_SESSION['usuario'])){
+    header("location:p_principal.php");
+}
+$nomusuario=$_SESSION["usuario"];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,7 +46,11 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
+  <header style=" transition: all 0.5s;
+  z-index: 997;
+ 
+  background: rgba(24, 6, 185, 0.8);
+  padding: 12px 0;" id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-between">
       <h1 class="logo"><a href="index.html">Biblioteca Municipal</a><img src="img/escudo.png" alt=""></h1>
   
@@ -52,8 +63,9 @@
           <li><a class="nav-link scrollto" href="#about">Libros</a></li>
           <li><a class="nav-link scrollto" href="#services">Prestamos</a></li>
           <li><a class="nav-link scrollto " href="#portfolio">Clientes</a></li>
-        <!-- <li><a class="nav-link scrollto" href="#contact">Contactos</a></li> -->  
-        <!--<li><a class="getstarted scrollto" href="#about">Get Started</a></li>  -->  
+          <a href="php/cerrar.php" class="btn btn-primary"><button  type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal">
+            cerrar sesion
+          </button></a> 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
