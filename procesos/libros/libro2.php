@@ -43,30 +43,53 @@ if ($F !="A"){
           <span class='input-group-text' id='inputGroup-sizing-default'>nombre del libro</span>
           <input type='text' class='form-control' name='nombre'  aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' value=".$datos['nombrel'].">
         </div>  ");  
-         
+
+        
+        echo(" <span class='input-group-text' id='inputGroup-sizing-default'>Editorial</span>");
+        
+        echo("<select class='form-select' aria-label='Default select example' id='editorial' name='editorial'>");
+           require "../../php/conexion.php";
+           $q="select * from  editoriales order by nombree";
+           $r=mysqli_query($con, $q);
+           while($datos2=mysqli_fetch_array($r)){
+            echo("<option value=". $datos2['id_editorial'].">". $datos2['nombree']."</option>");
+           }
           
-          echo("<div class='input-group mb-3'>
-          <span class='input-group-text' id='inputGroup-sizing-default'>editorial</span>
-          <input type='text' class='form-control' name='editorial' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' value=".$datos['editorial'].">
-        </div>  "); 
+           echo("</select>"); 
+           echo("<br>");
+          
+echo(" <span class='input-group-text' id='inputGroup-sizing-default'>Autor</span>");
+           echo("<select class='form-select' aria-label='Default select example' id='autor' name='autor'>");
+           require "../../php/conexion.php";
+           $q="select * from  autores order by nombrea";
+           $r=mysqli_query($con, $q);
+           while($datos3=mysqli_fetch_array($r)){
+            echo("<option value=". $datos3['id_autor'].">". $datos3['nombrea']."</option>");
+           }
+          
+           echo("</select>");
            
           
-           echo("<div class='input-group mb-3'>
-           <span class='input-group-text' id='inputGroup-sizing-default'>autor</span>
-           <input type='text' class='form-control' name='autor' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' value=".$datos['autor'].">
-         </div>  "); 
+           echo("<br>");
            
            
            echo("<div class='input-group mb-3'>
            <span class='input-group-text' id='inputGroup-sizing-default'>genero</span>
            <input type='text' class='form-control' name='genero' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' value=".$datos['genero'].">
          </div>  "); 
+         
+         echo(" <span class='input-group-text' id='inputGroup-sizing-default'>Pais del Autor</span>");
+         echo("<select class='form-select' aria-label='Default select example' id='autorp' name='autorp'>");
+         require "../../php/conexion.php";
+         $q="select * from  paisautor order by nombrep";
+         $r=mysqli_query($con, $q);
+         while($datos4=mysqli_fetch_array($r)){
+          echo("<option value=". $datos4['id_pais'].">". $datos4['nombrep']."</option>");
+         }
+        
+         echo("</select>");
            
-           
-           echo("<div class='input-group mb-3'>
-           <span class='input-group-text' id='inputGroup-sizing-default'>pais del autor</span>
-           <input type='text' class='form-control' name='autorp' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' value=".$datos['pais_autor'].">
-         </div>  "); 
+         echo("<br>");
           
            echo("<div class='input-group mb-3'>
            <span class='input-group-text' id='inputGroup-sizing-default'>numero de pagina</span>
@@ -87,8 +110,8 @@ if ($F !="A"){
            
            
            echo("<div class='input-group mb-3'>
-           <span class='input-group-text' id='inputGroup-sizing-default'>stock</span>
-           <input type='text' class='form-control' name='stock' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' value=".$datos['stock'].">
+           <span class='input-group-text' id='inputGroup-sizing-default'>cantidad disponible</span>
+           <input type='number' class='form-control' name='stock' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' value=".$datos['cant_disponible'].">
          </div>  "); 
            
           
@@ -96,6 +119,18 @@ if ($F !="A"){
            <span class='input-group-text' id='inputGroup-sizing-default'>estado del libro</span>
            <input type='text' class='form-control' name='estado' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' value=".$datos['estado'].">
          </div>  "); 
+
+         echo("<div class='input-group mb-3'>
+           <span class='input-group-text' id='inputGroup-sizing-default'>cantidad de libros prestado</span>
+           <input type='number' class='form-control' name='cant_lib' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' value=".$datos['cant_lib_prestado'].">
+         </div>  "); 
+
+         echo("<div class='input-group mb-3'>
+           <span class='input-group-text' id='inputGroup-sizing-default'>idioma</span>
+           <input type='text' class='form-control' name='idioma' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' value=".$datos['idioma'].">
+         </div>  "); 
+           
+           
            
            
            echo("<input type='text' name='funcion' value=".$F.">");
@@ -121,28 +156,50 @@ else{
           </div>  ");  
            
             
-            echo("<div class='input-group mb-3'>
-            <span class='input-group-text' id='inputGroup-sizing-default'>editorial</span>
-            <input type='text' class='form-control' name='editorial' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' >
-          </div>  "); 
-             
             
-             echo("<div class='input-group mb-3'>
-             <span class='input-group-text' id='inputGroup-sizing-default'>autor</span>
-             <input type='text' class='form-control' name='autor' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' >
-           </div>  "); 
+            
+         
+          echo(" <span class='input-group-text' id='inputGroup-sizing-default'>Editorial</span>");
+          echo("<select  class='form-select' aria-label='Default select example' id='editorial' name='editorial'>");
+          require "../../php/conexion.php";
+          $q="select * from  editoriales  order by nombree";
+          $r=mysqli_query($con, $q);
+          while($datos5=mysqli_fetch_array($r)){
+           echo("<option value=". $datos5['id_editorial'].">". $datos5['nombree']."</option>");
+          }
+         
+          echo("</select>"); 
+            
+          echo("<br>");
+          echo(" <span class='input-group-text' id='inputGroup-sizing-default'>Autor</span>");
+           echo("<select class='form-select' aria-label='Default select example' id='autor' name='autor'>");
+           require "../../php/conexion.php";
+           $q="select * from  autores order by nombrea";
+           $r=mysqli_query($con, $q);
+           while($datos6=mysqli_fetch_array($r)){
+            echo("<option value=". $datos6['id_autor'].">". $datos6['nombrea']."</option>");
+           }
+          
+           echo("</select>");
              
+           echo("<br>");
              
              echo("<div class='input-group mb-3'>
              <span class='input-group-text' id='inputGroup-sizing-default'>genero</span>
              <input type='text' class='form-control' name='genero' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' >
            </div>  "); 
+           echo(" <span class='input-group-text' id='inputGroup-sizing-default'>Pais del Autor</span>");
+           echo("<select class='form-select' aria-label='Default select example' id='autorp' name='autorp'>");
+         require "../../php/conexion.php";
+         $q="select * from  paisautor order by nombrep";
+         $r=mysqli_query($con, $q);
+         while($datos7=mysqli_fetch_array($r)){
+          echo("<option value=". $datos7['id_pais'].">". $datos7['nombrep']."</option>");
+         }
+        
+         echo("</select>");
+         echo("<br>");
              
-             
-             echo("<div class='input-group mb-3'>
-             <span class='input-group-text' id='inputGroup-sizing-default'>pais del autor</span>
-             <input type='text' class='form-control' name='autorp' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' >
-           </div>  "); 
             
              echo("<div class='input-group mb-3'>
              <span class='input-group-text' id='inputGroup-sizing-default'>numero de pagina</span>
@@ -162,16 +219,28 @@ else{
            </div>  "); 
              
              
-             echo("<div class='input-group mb-3'>
-             <span class='input-group-text' id='inputGroup-sizing-default'>stock</span>
-             <input type='text' class='form-control' name='stock' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' >
-           </div>  "); 
+            
              
+           echo("<div class='input-group mb-3'>
+           <span class='input-group-text' id='inputGroup-sizing-default'>cantidad de libros</span>
+           <input type='number' class='form-control' name='stock' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' >
+         </div>  "); 
             
              echo("<div class='input-group mb-3'>
              <span class='input-group-text' id='inputGroup-sizing-default'>estado del libro</span>
              <input type='text' class='form-control' name='estado' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' >
            </div>  "); 
+
+           echo("<div class='input-group mb-3'>
+           <span class='input-group-text' id='inputGroup-sizing-default'>cantidad de libros prestado</span>
+           <input type='number' class='form-control' name='cant_lib' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default'>
+         </div>  "); 
+
+         echo("<div class='input-group mb-3'>
+           <span class='input-group-text' id='inputGroup-sizing-default'>idioma</span>
+           <input type='text' class='form-control' name='idioma' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default'>
+         </div>  "); 
+
      echo("<input type='text' name='funcion' value=".$F.">");
      echo(  "<br>");
      echo( "<input type='submit' class='btn btn-primary' value='agregar'>");

@@ -130,14 +130,16 @@ $nomusuario=$_SESSION["usuario"];
       <th scope="col">Numero de pagina</th>
       <th scope="col">Año de edicion</th>
       <th scope="col">Precio del libro</th>
-      <th scope="col">Stock</th>
+      <th scope="col">cantidad disponible</th>
       <th scope="col">Estado del libro</th>
+      <th scope="col">Idioma</th>
+      <th scope="col">Cantidad de LIbros Prestado</th>
           </tr>
         </thead>
         <tbody>
 <?php
   require "php/conexion.php";
-  $q="select * from libros ";
+  $q="select * from libros, editoriales, autores, paisautor where libros.id_editorial=editoriales.id_editorial and libros.id_autor=autores.id_autor and libros.id_pais=paisautor.id_pais ";
   $r=mysqli_query($con, $q);
  
   while( $datos=mysqli_fetch_array($r)){
@@ -146,7 +148,7 @@ $nomusuario=$_SESSION["usuario"];
   
   <a href='procesos/libros/libro2.php?id_libro=".$datos['id_libro']."&funcion=B'><img src='img/goma-de-borrar.png' alt=''></a>
   
-  <td>". $datos['nombrel']."</td><td>".$datos['editorial']."</td><td>".$datos['autor']."</td><td>".$datos['genero']."</td><td>".$datos['pais_autor']."</td><td>".$datos['n_pagina']."</td><td>".$datos['año_edicion']."</td><td>".$datos['precio_libro']."</td><td>".$datos['stock']."</td><td>".$datos['estado']."</td>");
+  <td>". $datos['nombrel']."</td><td>".$datos['nombree']."</td><td>".$datos['nombrea']."</td><td>".$datos['genero']."</td><td>".$datos['nombrep']."</td><td>".$datos['n_pagina']."</td><td>".$datos['año_edicion']."</td><td>".$datos['precio_libro']."</td><td>".$datos['cant_disponible']."</td><td>".$datos['estado']."</td><td>".$datos['idioma']."</td><td>".$datos['cant_lib_prestado']."</td>");
    echo("</tr>");
    
 

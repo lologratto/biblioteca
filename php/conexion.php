@@ -3,7 +3,7 @@
 $dbip="localhost";
 $dbuser="root";
 $dbpass="";
-$dbname="biblioteca";
+$dbname="biblio";
 //conexion
 $con=mysqli_connect($dbip, $dbuser, $dbpass, $dbname);
 if(mysqli_connect_errno()){

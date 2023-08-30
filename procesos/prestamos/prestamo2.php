@@ -44,16 +44,33 @@ if ($F !="A"){
   </div>  "); 
      
     
-     echo("<div class='input-group mb-3'>
-     <span class='input-group-text' id='inputGroup-sizing-default'>id libro</span>
-     <input type='number' class='form-control' name='id_libro' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' value=".$datos['id_libro'].">
-   </div>  "); 
+    
+  echo(" <span class='input-group-text' id='inputGroup-sizing-default'>Nombre del Libro</span>");
+  echo("<select  class='form-select' aria-label='Default select example' id='libro' name='id_libro'>");
+  require "../../php/conexion.php";
+  $q="select * from  libros  order by nombrel";
+  $r=mysqli_query($con, $q);
+  while($datos1=mysqli_fetch_array($r)){
+   echo("<option value=". $datos1['id_libro'].">". $datos1['nombrel']."</option>");
+  }
+ 
+  echo("</select>");
      
+     echo("<br>");
+    
      
-     echo("<div class='input-group mb-3'>
-     <span class='input-group-text' id='inputGroup-sizing-default'>id cliente</span>
-     <input type='number' class='form-control' name='id_cliente' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' value=".$datos['id_cliente'].">
-   </div>  "); 
+     echo(" <span class='input-group-text' id='inputGroup-sizing-default'>Nombre del Cliente</span>");
+  echo("<select  class='form-select' aria-label='Default select example' id='cliente' name='id_cliente'>");
+  require "../../php/conexion.php";
+  $q="select * from  clientes  order by nombrec";
+  $r=mysqli_query($con, $q);
+  while($datos2=mysqli_fetch_array($r)){
+   echo("<option value=". $datos2['id_cliente'].">". $datos2['nombrec']."</option>");
+  }
+ 
+  echo("</select>");
+     
+     echo("<br>");
      
      
      echo("<div class='input-group mb-3'>
@@ -92,16 +109,32 @@ else{
   </div>  "); 
      
     
-     echo("<div class='input-group mb-3'>
-     <span class='input-group-text' id='inputGroup-sizing-default'>id libro</span>
-     <input type='number' class='form-control' name='id_libro' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' >
-   </div>  "); 
+  echo(" <span class='input-group-text' id='inputGroup-sizing-default'>Nombre del Libro</span>");
+  echo("<select  class='form-select' aria-label='Default select example' id='libro' name='id_libro'>");
+  require "../../php/conexion.php";
+  $q="select * from  libros  order by nombrel";
+  $r=mysqli_query($con, $q);
+  while($datos3=mysqli_fetch_array($r)){
+   echo("<option value=". $datos3['id_libro'].">". $datos3['nombrel']."</option>");
+  }
+ 
+  echo("</select>");
      
+     echo("<br>");
+    
      
-     echo("<div class='input-group mb-3'>
-     <span class='input-group-text' id='inputGroup-sizing-default'>id cliente</span>
-     <input type='number' class='form-control' name='genero' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default'>
-   </div>  "); 
+     echo(" <span class='input-group-text' id='inputGroup-sizing-default'>Nombre del Cliente</span>");
+  echo("<select  class='form-select' aria-label='Default select example' id='cliente' name='id_cliente'>");
+  require "../../php/conexion.php";
+  $q="select * from  clientes  order by nombrec";
+  $r=mysqli_query($con, $q);
+  while($datos4=mysqli_fetch_array($r)){
+   echo("<option value=". $datos4['id_cliente'].">". $datos4['nombrec']."</option>");
+  }
+ 
+  echo("</select>");
+     
+     echo("<br>");
      
      
      echo("<div class='input-group mb-3'>

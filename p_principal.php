@@ -112,7 +112,7 @@
       
         <thead>
           <tr>
-          <th scope="col">#</th>
+          
       <th scope="col">Nombre del libro</th>
       <th scope="col">Editorial</th>
       <th scope="col">Autor</th>
@@ -121,23 +121,23 @@
       <th scope="col">Numero de pagina</th>
       <th scope="col">Año de edicion</th>
       <th scope="col">Precio del libro</th>
-      <th scope="col">Stock</th>
+      <th scope="col">cantidad disponible</th>
       <th scope="col">Estado del libro</th>
+      <th scope="col">Idioma</th>
+      <th scope="col">Cantidad de LIbros Prestado</th>
           </tr>
         </thead>
         <tbody>
 <?php
   require "php/conexion.php";
-  $q="select * from libros ";
+  $q="select * from libros, editoriales, autores, paisautor where libros.id_editorial=editoriales.id_editorial  ";
   $r=mysqli_query($con, $q);
  
   while( $datos=mysqli_fetch_array($r)){
     echo("<tr>");
-    echo("<td scope='row'> <a href='procesos/libros/libro2.php?id_libro=".$datos['id_libro']."&funcion=M' ><img src='img/editar.png' alt='' ></a>
+    
   
-  <a href='procesos/libros/libro2.php?id_libro=".$datos['id_libro']."&funcion=B'><img src='img/goma-de-borrar.png' alt=''></a>
-  
-  <td>". $datos['nombrel']."</td><td>".$datos['editorial']."</td><td>".$datos['autor']."</td><td>".$datos['genero']."</td><td>".$datos['pais_autor']."</td><td>".$datos['n_pagina']."</td><td>".$datos['año_edicion']."</td><td>".$datos['precio_libro']."</td><td>".$datos['stock']."</td><td>".$datos['estado']."</td>");
+ echo(" <td>". $datos['nombrel']."</td><td>".$datos['nombree']."</td><td>".$datos['nombrea']."</td><td>".$datos['genero']."</td><td>".$datos['nombrep']."</td><td>".$datos['n_pagina']."</td><td>".$datos['año_edicion']."</td><td>".$datos['precio_libro']."</td><td>".$datos['cant_disponible']."</td><td>".$datos['estado']."</td><td>".$datos['idioma']."</td><td>".$datos['cant_lib_prestado']."</td>");
    echo("</tr>");
    
 
@@ -146,23 +146,22 @@
   
   ?>
   </tbody>
-  <a href='procesos/libros/libro2.php?id_libro=0&funcion=A' ><img src='img/boton-agregar.png ' class="m-2" height="50px" ></a>
+  
   </table>
 </body>
+ <!-- </div>
+    </section> End About Section 
 
-      </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Counts Section ======= -->
+     ======= Counts Section =======
     <section id="counts" class="counts">
       <div class="container">
 
         
 
       </div>
-    </section><!-- End Counts Section -->
+    </section>< End Counts Section 
 
-    <!-- ======= Services Section ======= -->
+     ======= Services Section ======= 
     <section id="services" class="services section-bg">
       <div class="container" data-aos="fade-up">
      
@@ -171,30 +170,30 @@
     </section>
 
       </div>
-    </section><!-- End Services Section -->
+    </section>< End Services Section
 
-    <!-- End About Section -->
+    End About Section -->
 
-    <!-- ======= Counts Section ======= -->
+    <!-- ======= Counts Section ======= 
     <section id="counts" class="counts">
       <div class="container">
 
         
 
       </div>
-    </section><!-- End Counts Section -->
+    </section>< End Counts Section 
 
    
 
     
 
-    <!-- ======= Portfolio Section ======= -->
+     ======= Portfolio Section ======= 
     <section id="portfolio" class="portfolio">
       <div class="container" data-aos="fade-up">
      
       </div>
-    </section><!-- End Portfolio Section -->
-    <!-- ======= Counts Section ======= -->
+    </section>< End Portfolio Section 
+     ======= Counts Section ======= 
     <section id="counts" class="counts">
       <div class="container">
 
@@ -205,7 +204,8 @@
 
   
    
-  </main><!-- End #main -->
+  </main>< End #main  -->
+      
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
