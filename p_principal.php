@@ -23,6 +23,8 @@
   <link href="template/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="template/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="template/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <script src="js/jquery-3.7.0.min.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css"></link>
 
   <!-- Template Main CSS File -->
   <link href="template/assets/css/style.css" rel="stylesheet">
@@ -90,8 +92,7 @@
     <div class="row">
         <div class="section-title">
           <h2>Libros</h2>
-          
-        </div>
+          </div>
           <div class="col">
             
           </div>
@@ -105,14 +106,15 @@
         
         <table class="table caja2" border="2px"> 
      </div >
-        
 
-        <table class="table table-bordered border-dark table-secondary table-hover" border="2px">
-        <thead class="m-1">
-      
-        <thead>
-          <tr>
-          
+          <body>
+<button id="todos">todos</button>
+<label  for="">Nombre del Libro</label>
+<input type="text" id="descripcion">
+<table class="table table-bordered border-dark table-secondary table-hover" border="2px">
+  <thead>
+    <tr>
+    <th scope="col">#</th>
       <th scope="col">Nombre del libro</th>
       <th scope="col">Editorial</th>
       <th scope="col">Autor</th>
@@ -121,91 +123,22 @@
       <th scope="col">Numero de pagina</th>
       <th scope="col">Año de edicion</th>
       <th scope="col">Precio del libro</th>
-      <th scope="col">cantidad disponible</th>
       <th scope="col">Estado del libro</th>
-      <th scope="col">Idioma</th>
+      <th scope="col">cantidad disponible</th>
       <th scope="col">Cantidad de LIbros Prestado</th>
-          </tr>
-        </thead>
-        <tbody>
-<?php
-  require "php/conexion.php";
-  $q="select * from libros, editoriales, autores, paisautor where libros.id_editorial=editoriales.id_editorial  ";
-  $r=mysqli_query($con, $q);
- 
-  while( $datos=mysqli_fetch_array($r)){
-    echo("<tr>");
-    
-  
- echo(" <td>". $datos['nombrel']."</td><td>".$datos['nombree']."</td><td>".$datos['nombrea']."</td><td>".$datos['genero']."</td><td>".$datos['nombrep']."</td><td>".$datos['n_pagina']."</td><td>".$datos['año_edicion']."</td><td>".$datos['precio_libro']."</td><td>".$datos['cant_disponible']."</td><td>".$datos['estado']."</td><td>".$datos['idioma']."</td><td>".$datos['cant_lib_prestado']."</td>");
-   echo("</tr>");
-   
-
-
-  }
-  
-  ?>
-  </tbody>
-  
-  </table>
-</body>
- <!-- </div>
-    </section> End About Section 
-
-     ======= Counts Section =======
-    <section id="counts" class="counts">
-      <div class="container">
-
-        
-
-      </div>
-    </section>< End Counts Section 
-
-     ======= Services Section ======= 
-    <section id="services" class="services section-bg">
-      <div class="container" data-aos="fade-up">
-     
-
-      </div>
-    </section>
-
-      </div>
-    </section>< End Services Section
-
-    End About Section -->
-
-    <!-- ======= Counts Section ======= 
-    <section id="counts" class="counts">
-      <div class="container">
-
-        
-
-      </div>
-    </section>< End Counts Section 
-
-   
-
-    
-
-     ======= Portfolio Section ======= 
-    <section id="portfolio" class="portfolio">
-      <div class="container" data-aos="fade-up">
-     
-      </div>
-    </section>< End Portfolio Section 
-     ======= Counts Section ======= 
-    <section id="counts" class="counts">
-      <div class="container">
-
-        
-
-      </div>
-    </section>
-
-  
-   
-  </main>< End #main  -->
+      <th scope="col">Idioma</th>
       
+    </tr>
+  </thead>
+  <tbody id="tabla">
+         
+         </tbody>
+ 
+</table>
+    <script src="js/bootstrap.min.js"></script> 
+      <script src="js/libros.js"></script> 
+</body>
+
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
