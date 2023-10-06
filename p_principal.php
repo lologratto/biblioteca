@@ -55,9 +55,9 @@
       <nav id="navbar" class="navbar">
         <ul>
         <li><a class="nav-link scrollto" href="#about">Libros</a></li>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+     <li><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Iniciar Sesion
-</button>
+</button></li>   
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -108,9 +108,11 @@
      </div >
 
           <body>
-<button id="todos">todos</button>
-<label  for="">Nombre del Libro</label>
-<input type="text" id="descripcion">
+          <button id="todos" type="button" style="background-color: #573DF0;" class="btn btn-info">Todos</button>       
+<div class="section-title">
+<label  for="">Nombre del Libro</label><br>
+<input type="text" id="descripcion"></div>
+
 <table class="table table-bordered border-dark table-secondary table-hover" border="2px">
   <thead>
     <tr>
@@ -193,7 +195,7 @@
         <br>
         
             <div >
-              <button class="btn btn-danger" type="submit">Login</button>
+              <button class="btn btn-primary" type="submit">Login</button>
             </div>
           </form>
         </div>
