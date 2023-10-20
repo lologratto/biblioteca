@@ -10,14 +10,15 @@ $prov=$_GET['provincia'];
 $id=$_GET['id_cliente'];
 $nac=$_GET['nacimiento'];
 $F=$_GET['funcion'];
+$estado=$_GET['data'];
 
 
 if($F=="A"){
     
-    $q="insert into clientes ( nombrec, apellido, DNI, domicilio, poblacion, provincia, fecha_nac) values ('$nombre','$cliente','$dni','$dom', '$pob', '$prov', '$nac')";
+    $q="insert into clientes ( nombrec, apellido, DNI, domicilio, poblacion, provincia, fecha_nac, estadoc) values ('$nombre','$cliente','$dni','$dom', '$pob', '$prov', '$nac', '$estado')";
 }
 elseif($F=="M"){
-    $q="update clientes set nombrec='$nombre', apellido='$apellido', DNI='$dni', domicilio='$dom', poblacion='$pob', provincia='$prov', fecha_nac='$nac' where id_cliente=$id";
+    $q="update clientes set nombrec='$nombre', apellido='$apellido', DNI='$dni', domicilio='$dom', poblacion='$pob', provincia='$prov', fecha_nac='$nac', estadoc='$estado' where id_cliente=$id";
 }
 else
 {

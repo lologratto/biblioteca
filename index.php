@@ -307,6 +307,7 @@ $nomusuario=$_SESSION["usuario"];
       <th scope="col">Ciudad</th>
       <th scope="col">Provincia</th>
       <th scope="col">Fecha de Nacimiento</th>
+      <th scope="col">Estado</th>
           </tr>
         </thead>
         <tbody>
@@ -321,7 +322,7 @@ $nomusuario=$_SESSION["usuario"];
   
   <a href='procesos/clientes/cliente2.php?id_cliente=".$datos['id_cliente']."&funcion=B'><img src='img/goma-de-borrar.png' alt=''></a>
   
-  <td>".$datos['id_cliente']."</td><td>".$datos['nombrec']."</td><td>".$datos['apellido']."</td><td>".$datos['DNI']."</td><td>".$datos['domicilio']."</td><td>".$datos['poblacion']."</td><td>".$datos['provincia']."</td><td>".$datos['fecha_nac']."</td>");
+  <td>".$datos['id_cliente']."</td><td>".$datos['nombrec']."</td><td>".$datos['apellido']."</td><td>".$datos['DNI']."</td><td>".$datos['domicilio']."</td><td>".$datos['poblacion']."</td><td>".$datos['provincia']."</td><td>".$datos['fecha_nac']."</td><td>".$datos['estadoc']."</td>");
    echo("</tr>");
    
 
@@ -562,8 +563,7 @@ $nomusuario=$_SESSION["usuario"];
 
     <!-- End About Section -->
 
-    <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts">
+<!-- <section id="counts" class="counts">
       <div class="container">
 
         
@@ -639,7 +639,10 @@ $nomusuario=$_SESSION["usuario"];
         
 
       </div>
-    </section>
+    </section> -->
+
+   
+    
   
     <section id="pago" class="services section-bg">
       <div class="container" data-aos="fade-up">

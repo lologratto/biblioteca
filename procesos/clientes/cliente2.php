@@ -1,3 +1,5 @@
+<title>Biblioteca Municipal</title>
+<link href="../../img/escudo.png" rel="icon">
 <link href="../../template/assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="../../template/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="../../template/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -17,6 +19,7 @@
   <!-- Template Main JS File -->
   <script src="../../template/assets/js/main.js"></script>
 <?php
+require '../../php/cabecera3.php';
 require "../../php/conexion.php";
 $id = $_GET['id_cliente'];
 $F=$_GET['funcion'];
@@ -76,6 +79,11 @@ if ($F !="A"){
    <input type='date' class='form-control' name='nacimiento' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' value=".$datos['fecha_nac'].">
  </div>  "); 
           
+ echo("<div class='input-group mb-3'>
+ <span class='input-group-text' id='inputGroup-sizing-default'>Estado</span>
+ <input type='text' class='form-control' name='data' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' value=".$datos['estadoc']." >
+</div>  "); 
+
 
            echo("<input type='text' name='funcion' value=".$F.">");
            echo(  "<br>");
@@ -123,6 +131,7 @@ else{
      <input type='tex' class='form-control' name='poblacion' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default'
    </div>  "); 
    echo(  "<br>");
+   
    echo("<div class='input-group mb-3'>
      <span class='input-group-text' id='inputGroup-sizing-default'>provincia</span>
      <input type='tex' class='form-control' name='provincia' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default'>
@@ -132,13 +141,22 @@ else{
    <span class='input-group-text' id='inputGroup-sizing-default'>fecha de nacimiento</span>
    <input type='date' class='form-control' name='nacimiento' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' >
  </div>  "); 
+
+ echo("<div class='input-group mb-3'>
+ <span class='input-group-text' id='inputGroup-sizing-default'>Estado</span>
+ <input type='text' class='form-control' name='data' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' value='A' >
+</div>  "); 
+
+ echo ( "</center>");
  echo ( "<center>");
      echo("<input type='text' name='funcion' value=".$F.">");
+     
      echo(  "<br>");
      echo( "<input type='submit' class='btn btn-primary' value='agregar'>");
-     
+     echo("</center>");
 echo ("</form>");
 
 
 
 }
+require '../../php/pie.php';

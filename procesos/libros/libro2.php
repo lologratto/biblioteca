@@ -1,3 +1,5 @@
+<title>Biblioteca Municipal</title>
+<link href="../../img/escudo.png" rel="icon">
 <link href="../../template/assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="../../template/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="../../template/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -17,6 +19,7 @@
   <!-- Template Main JS File -->
   <script src="../../template/assets/js/main.js"></script>
 <?php
+require '../../php/cabecera3.php';
 require "../../php/conexion.php";
 $id = $_GET['id_libro'];
 $F=$_GET['funcion'];
@@ -249,3 +252,4 @@ echo ("</form>");
 
 }
 
+require '../../php/pie.php';

@@ -108,7 +108,7 @@
      </div >
 
           <body>
-          <button id="todos" type="button" style="background-color: #573DF0;" class="btn btn-info">Todos</button>       
+          <button id="todos" type="button"  class="btn btn-success">Todos</button>       
 <div class="section-title">
 <label  for="">Nombre del Libro</label><br>
 <input type="text" id="descripcion"></div>
