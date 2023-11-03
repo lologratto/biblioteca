@@ -41,7 +41,7 @@ $.ajax({
             }
             $('#tabla').append("<tr>"+ 
             "<td>"+ value.id_cliente+"</td>"+
-             "<td>"+ value.id_cuota+"</td>"+ 
+             "<td>"+ value.mes+"</td>"+ 
              "<td>"+ value.importe+"</td>"+
              "<td>"+ value.estado+"</td>"+
              "<td>"+ value.año+"</td>"+
