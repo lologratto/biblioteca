@@ -3,7 +3,7 @@ require "../../php/conexion.php";
 $mesd= $_GET ['mesDesde'];
 $mesh= $_GET ['mesHasta'];
 $año= $_GET ['año'];
-$sociod= $_GET ['socioDesde'];
+$sociod= $_GET ['namesocio'];
 $socioh= $_GET ['socioHasta'];
 $imp= $_GET ['importe'];
 

@@ -669,11 +669,21 @@ $nomusuario=$_SESSION["usuario"];
    
     <div class="container">
     <form>
-        <div class="mb-3">
-          <label for="socio" class="form-label">socio</label>
-          <input  type="number" name="namesocio" class="form-control" value="1" min="1" max="1000" id="socio">
-          
-        </div>
+       
+    <label> Cliente:</label>
+     <select name="namesocio" type="text" class="form-control form-select"  id="socio"placeholder="Cliente">
+    
+    <?php
+    require "php/conexion.php";
+    $q="SELECT * FROM clientes  ORDER by nombrec";
+    $r=mysqli_query($con,$q);
+    while($valores=mysqli_fetch_array($r)){
+    echo('<option value='.$valores['id_cliente'].'>'.$valores['nombrec'].'</option>');
+}
+    ?>
+
+    </select>
+
         <div class="mb-3">
           <label for="año" class="form-label">año</label>
           <input type="number" name="año" class="form-control" value="2023" max="2025" id="año">

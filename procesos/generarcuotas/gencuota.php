@@ -83,20 +83,35 @@ $raiz = "../../";
   <div class="row">
   <div class="col-4">
   <div class="input-group mb-3"> 
-<label class="input-group-text"  for="">socio desde:</label>
-<div class="form-floating">
-<input class="form-control"  type="number"min="1" max="999" value="1" name="socioDesde">
-<label for="floatingInputGroup1">Ingrese el Dato</label>
+
+ <label class="input-group-text"> Cliente:</label>
+     <select name="namesocio" type="text" class="form-control form-select"  id="socio"placeholder="Cliente">
+    
+    <?php
+    require "../../php/conexion.php";
+    $q="SELECT * FROM clientes  ORDER by nombrec";
+    $r=mysqli_query($con,$q);
+    while($valores=mysqli_fetch_array($r)){
+    echo('<option value='.$valores['id_cliente'].'>'.$valores['nombrec'].'</option>');
+}
+    ?>
+
+    </select>
+    </div>
 </div>
 </div>
 </div>
+</div>
+</div>
+
+
 <div class="col-1"></div>
 <div class="col-4">
 <div class="input-group mb-3"> 
-<label class="input-group-text" for="">socio hasta:</label>
+
 <div class="form-floating">
-<input class="form-control" type="number"min="1" max="999" value="999" name="socioHasta">
-<label for="floatingInputGroup1">Ingrese el Dato</label>
+<input class="form-control" type="hidden"min="1" max="999" value="999" name="socioHasta">
+
 </div>
 </div>
 </div>

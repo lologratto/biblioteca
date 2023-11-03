@@ -71,7 +71,7 @@ if ($F !="A"){
     
    echo("<div class='input-group mb-3'>
      <span class='input-group-text' id='inputGroup-sizing-default'>provincia</span>
-     <input type='tex' class='form-control' name='provincia' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' value=".$datos['provincia'].">
+     <input type='tex' class='form-control' name='provincia' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' value='".$datos['provincia']."'>
    </div>  "); 
          
    echo("<div class='input-group mb-3'>
@@ -98,8 +98,8 @@ else{
     echo(" <form action='cliente3.php' method='GET'>");
     echo("<h1>Clientes</h1>");
     echo("<div class='input-group mb-3'>
-    <span class='input-group-text' id='inputGroup-sizing-default'>id cliente</span>
-    <input type='text' class='form-control' name='id_cliente' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default'>
+   
+    <input type='hidden' class='form-control' name='id_cliente' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default'>
   </div>  ");  
    
     
@@ -128,14 +128,13 @@ else{
 
    echo("<div class='input-group mb-3'>
      <span class='input-group-text' id='inputGroup-sizing-default'>ciudad</span>
-     <input type='tex' class='form-control' name='poblacion' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default'
+     <input type='tex' class='form-control' name='poblacion' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' >
    </div>  "); 
-   echo(  "<br>");
-   
+    
    echo("<div class='input-group mb-3'>
      <span class='input-group-text' id='inputGroup-sizing-default'>provincia</span>
-     <input type='tex' class='form-control' name='provincia' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default'>
-   </div>  "); 
+     <input type='tex' class='form-control' name='provincia' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' >
+   </div>  ");  
          
    echo("<div class='input-group mb-3'>
    <span class='input-group-text' id='inputGroup-sizing-default'>fecha de nacimiento</span>
