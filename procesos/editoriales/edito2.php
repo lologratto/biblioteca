@@ -34,7 +34,7 @@ if ($F !="A"){
     <?php
     echo ( "<center>");
     echo(" <form action='edito3.php' method='GET'>");
-
+    echo("<h1>Editoriales</h1>");
     echo("<div class='input-group mb-3'>
     <span class='input-group-text' id='inputGroup-sizing-default'>id editorial</span>
     <input type='text' class='form-control' name='id_editorial'readonly aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' value=".$datos['id_editorial'].">
@@ -61,7 +61,7 @@ if ($F !="A"){
 else{ 
     echo ( "<center>");
     echo(" <form action='edito3.php' method='GET'>");
-
+    echo("<h1>Editoriales</h1>");
     echo("<div class='input-group mb-3'>
     <span class='input-group-text' id='inputGroup-sizing-default'>id editorial</span>
     <input type='text' class='form-control' name='id_editorial'readonly aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' >

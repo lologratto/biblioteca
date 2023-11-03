@@ -108,7 +108,13 @@
      </div >
 
           <body>
-          <button id="todos" type="button"  class="btn btn-success">Todos</button>       
+          <div class="container">
+    <div class="row">
+          <div class='col-3'>
+          <button id="todos" type="button"  class="btn btn-success">Todos los Libros</button> 
+          </div>   
+          </div>   
+          </div>      
 <div class="section-title">
 <label  for="">Nombre del Libro</label><br>
 <input type="text" id="descripcion"></div>

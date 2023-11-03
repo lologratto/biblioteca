@@ -34,7 +34,7 @@ if ($F !="A"){
     <?php
     echo ( "<center>");
     echo(" <form action='cliente3.php' method='GET'>");
-
+    echo("<h1>Clientes</h1>");
     echo("<div class='input-group mb-3'>
     <span class='input-group-text' id='inputGroup-sizing-default'>id cliente</span>
     <input type='text' class='form-control' name='id_cliente'readonly aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' value=".$datos['id_cliente'].">
@@ -61,7 +61,7 @@ if ($F !="A"){
      
      echo("<div class='input-group mb-3'>
      <span class='input-group-text' id='inputGroup-sizing-default'>domicilio</span>
-     <input type='text' class='form-control' name='domicilio' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' value=".$datos['domicilio'].">
+     <input type='text' class='form-control' name='domicilio' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' value='".$datos['domicilio']."'>
    </div>  "); 
 
    echo("<div class='input-group mb-3'>
@@ -96,7 +96,7 @@ if ($F !="A"){
 else{ 
     echo ( "<center>");
     echo(" <form action='cliente3.php' method='GET'>");
-        
+    echo("<h1>Clientes</h1>");
     echo("<div class='input-group mb-3'>
     <span class='input-group-text' id='inputGroup-sizing-default'>id cliente</span>
     <input type='text' class='form-control' name='id_cliente' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default'>

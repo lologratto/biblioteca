@@ -26,7 +26,7 @@ $F=$_GET['funcion'];
  
 if ($F !="A"){
     // modificar y borrar
-    $q="select * from paisautores where id_pais=$id";
+    $q="select * from paisautor where id_pais=$id";
 
     $r=mysqli_query($con, $q);
     while($datos=mysqli_fetch_array($r)){
@@ -34,7 +34,7 @@ if ($F !="A"){
     <?php
     echo ( "<center>");
     echo(" <form action='pais3.php' method='GET'>");
-
+    echo("<h1>Pais Del Autor</h1>");
     echo("<div class='input-group mb-3'>
     <span class='input-group-text' id='inputGroup-sizing-default'>id pais</span>
     <input type='text' class='form-control' name='id_pais'readonly aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' value=".$datos['id_pais'].">
@@ -61,7 +61,7 @@ if ($F !="A"){
 else{ 
     echo ( "<center>");
     echo(" <form action='pais3.php' method='GET'>");
-
+    echo("<h1>Pais Del Autor</h1>");
     echo("<div class='input-group mb-3'>
     <span class='input-group-text' id='inputGroup-sizing-default'>id pais</span>
     <input type='text' class='form-control' name='id_pais'readonly aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' >

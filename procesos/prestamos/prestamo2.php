@@ -36,7 +36,7 @@ if ($F !="A"){
     <?php
     echo ( "<center>");
     echo(" <form action='prestamo3.php' method='GET'>");
-    
+    echo("<h1>Prestamos</h1>");
     echo("<div class='input-group mb-3'>
     <span class='input-group-text' id='inputGroup-sizing-default'>id prestamo</span>
     <input type='text' class='form-control' name='id_prestamo'readonly aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' value=".$datos['id_prestamo'].">
@@ -101,7 +101,7 @@ if ($F !="A"){
 else{ 
     echo ( "<center>");
     echo(" <form action='prestamo3.php' method='GET'>");
-        
+    echo("<h1>Prestamos</h1>");
     echo("<div class='input-group mb-3'>
     <span class='input-group-text' id='inputGroup-sizing-default'>id prestamo</span>
     <input type='text' class='form-control' name='id_prestamo'  aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default' >
