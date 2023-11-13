@@ -56,8 +56,13 @@ if ($F !="A"){
   $q="select * from  libros  order by nombrel";
   $r=mysqli_query($con, $q);
   while($datos1=mysqli_fetch_array($r)){
-   echo("<option value=". $datos1['id_libro'].">". $datos1['nombrel']."</option>");
+    if($datos1['id_libro']==$datos['id_libro']) {
+   echo("<option selected value=". $datos1['id_libro'].">". $datos1['nombrel']."</option>");
+  }else{
+    echo("<option  value=". $datos1['id_libro'].">". $datos1['nombrel']."</option>");
+ 
   }
+}
  
   echo("</select>");
      
@@ -70,8 +75,13 @@ if ($F !="A"){
   $q="select * from  clientes  order by nombrec";
   $r=mysqli_query($con, $q);
   while($datos2=mysqli_fetch_array($r)){
-   echo("<option value=". $datos2['id_cliente'].">". $datos2['nombrec']."</option>");
+    if($datos2['id_cliente']==$datos['id_cliente']) {
+   echo("<option selected value=". $datos2['id_cliente'].">". $datos2['nombrec']."</option>");
+  }else{
+    echo("<option  value=". $datos2['id_cliente'].">". $datos2['nombrec']."</option>");
+ 
   }
+}
  
   echo("</select>");
      

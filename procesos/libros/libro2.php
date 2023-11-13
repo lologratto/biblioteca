@@ -55,8 +55,13 @@ echo("<h1>Libros</h1>");
            $q="select * from  editoriales order by nombree";
            $r=mysqli_query($con, $q);
            while($datos2=mysqli_fetch_array($r)){
-            echo("<option value=". $datos2['id_editorial'].">". $datos2['nombree']."</option>");
+            if($datos2['id_editorial']==$datos['id_editorial']) {
+            echo("<option selected value=". $datos2['id_editorial'].">". $datos2['nombree']."</option>");
+           }else{
+            echo("<option  value=". $datos2['id_editorial'].">". $datos2['nombree']."</option>");
+          
            }
+          }
           
            echo("</select>"); 
            echo("<br>");
@@ -67,8 +72,13 @@ echo(" <span class='input-group-text' id='inputGroup-sizing-default'>Autor</span
            $q="select * from  autores order by nombrea";
            $r=mysqli_query($con, $q);
            while($datos3=mysqli_fetch_array($r)){
-            echo("<option value=". $datos3['id_autor'].">". $datos3['nombrea']."</option>");
+            if($datos3['id_autor']==$datos['id_autor']) {
+            echo("<option selected value=". $datos3['id_autor'].">". $datos3['nombrea']."</option>");
+           }else{
+            echo("<option  value=". $datos3['id_autor'].">". $datos3['nombrea']."</option>");
+          
            }
+          }
           
            echo("</select>");
            
@@ -87,8 +97,13 @@ echo(" <span class='input-group-text' id='inputGroup-sizing-default'>Autor</span
          $q="select * from  paisautor order by nombrep";
          $r=mysqli_query($con, $q);
          while($datos4=mysqli_fetch_array($r)){
+          if($datos4['id_pais']==$datos['id_pais']) {
+          echo("<option selected value=". $datos4['id_pais'].">". $datos4['nombrep']."</option>");
+         }else{
           echo("<option value=". $datos4['id_pais'].">". $datos4['nombrep']."</option>");
+        
          }
+        }
         
          echo("</select>");
            

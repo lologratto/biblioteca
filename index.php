@@ -125,7 +125,8 @@ $nomusuario=$_SESSION["usuario"];
       <div>
       <div class="caja3 ">
           
-        
+      <div class="container">
+      <div class="caja3 ">
         
         <table class="table caja2" border="2px"> 
      </div >
@@ -204,7 +205,8 @@ $nomusuario=$_SESSION["usuario"];
       <div>
       <div class="caja3 ">
           
-        
+      <div class="container">
+      <div class="caja3 ">
         
         <table class="table caja2" border="2px"> 
      </div >
@@ -288,7 +290,8 @@ $nomusuario=$_SESSION["usuario"];
       <div class="caja3 ">
           
         
-        
+      <div class="container">
+      <div class="caja3 ">
         <table class="table caja2" border="2px"> 
      </div >
         
@@ -361,7 +364,8 @@ $nomusuario=$_SESSION["usuario"];
       <div>
       <div class="caja3 ">
           
-        
+      <div class="container">
+      <div class="caja3 ">
         
         <table class="table caja2" border="2px"> 
      </div >
@@ -438,7 +442,8 @@ $nomusuario=$_SESSION["usuario"];
       <div>
       <div class="caja3 ">
           
-        
+      <div class="container">
+      <div class="caja3 ">
         
         <table class="table caja2" border="2px"> 
      </div >
@@ -513,7 +518,8 @@ $nomusuario=$_SESSION["usuario"];
       <div>
       <div class="caja3 ">
           
-        
+      <div class="container">
+      <div class="caja3 ">
         
         <table class="table caja2" border="2px"> 
      </div >
@@ -751,5 +757,5 @@ $nomusuario=$_SESSION["usuario"];
   <script src="template/assets/js/main.js"></script>
 
 </body>
-
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
 </html>
